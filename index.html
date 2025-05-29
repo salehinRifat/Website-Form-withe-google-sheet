@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Login Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="floating-shapes">
+            <div class="shape"
+                style="width: 60px; height: 60px; background: rgba(255,255,255,0.1); border-radius: 50%;">
+            </div>
+            <div class="shape"
+                style="width: 80px; height: 80px; background: rgba(255,255,255,0.05); border-radius: 20px;">
+            </div>
+            <div class="shape"
+                style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%;">
+            </div>
+        </div>
+
+        <div class="form-container">
+            <div class="form-header">
+                <h1 class="form-title">CF Handle info</h1>
+                <p class="form-subtitle">Please fill in your details to continue</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="batch" class="form-label">Batch</label>
+                    <input type="text" id="batch" name="batch" class="form-input" placeholder="Enter your batch"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="handle" class="form-label">Handle</label>
+                    <input type="text" id="handle" name="handle" class="form-input" placeholder="Enter your handle"
+                        required>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <div class="loading-spinner"></div>
+                    <div class="success-checkmark"></div>
+                    <span class="btn-text">Submit</span>
+                </button>
+            </form>
+
+            <button class="view-data-btn" id="viewDataBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                    <line x1="9" y1="9" x2="9" y2="15" />
+                    <line x1="15" y1="9" x2="15" y2="15" />
+                </svg>
+                View Submitted Data
+            </button>
+        </div>
+
+        <!-- Data Table Modal -->
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h2 class="modal-title">Submitted Information</h2>
+                    <button class="close-btn" id="closeModal">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18" />
+                            <line x1="6" y1="6" x2="18" y2="18" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-container">
+                        <table class="data-table" id="dataTable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Batch</th>
+                                    <th>Handle</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td colspan="6" id="loader-wrap">
+                                    <div style="display: flex; justify-content: center; align-items: center;">
+                                        <div id="loader" class="loader" style="display: none;"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tbody id="tableBody">
+                                <tr class="no-data">
+                                    <td colspan="6">No data submitted yet</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <footer>
+        <div class="floating-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <div class="footer-content">
+            <div class="dev-info">
+                <a href="https://www.facebook.com/salehin.rifat2" class="social-link" target="_blank"
+                    rel="noopener noreferrer">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                 <a href="https://www.github.com/salehinRifat" class="social-link" target="_blank"
+                    rel="noopener noreferrer">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
